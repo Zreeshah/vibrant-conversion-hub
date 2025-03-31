@@ -1,8 +1,8 @@
-
 import React from 'react';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
+import ComprehensiveConversionTable from '@/components/ComprehensiveConversionTable';
 
 const Index = () => {
   // 1 inch = 2.54 cm
@@ -455,53 +455,4 @@ const Index = () => {
             Estas conversiones ayudan en diversas aplicaciones, desde la construcción hasta la fabricación.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">6. ¿Dónde se siguen utilizando las pulgadas?</h3>
-          <p className="text-gray-700 mb-4">
-            Aunque la mayoría de los países utilizan el sistema métrico decimal, las pulgadas se siguen utilizando habitualmente en:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Estados Unidos, Canadá y Reino Unido: Se utilizan en medidas de altura, tamaños de papel y dimensiones de pantallas.</li>
-            <li className="mb-2">Ingeniería y construcción: Muchos planos y herramientas aún utilizan las pulgadas.</li>
-            <li className="mb-2">Tecnología y pantallas: Los tamaños de las pantallas de televisores, portátiles y móviles se miden en pulgadas en todo el mundo.</li>
-            <li className="mb-2">Aviación: La altitud de los aviones y las dimensiones de las pistas a veces utilizan pulgadas en algunos países.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">7. ¿Dónde podemos encontrar el término «pulgada»?</h3>
-          <p className="text-gray-700 mb-4">
-            El término «pulgada» se encuentra habitualmente en varios contextos, entre ellos:
-          </p>
-          <p className="text-gray-700 mb-2"><strong>Tamaños de pantalla</strong>: Ordenadores portátiles, televisores y pantallas de teléfonos inteligentes.</p>
-          <p className="text-gray-700 mb-2"><strong>Construcción:</strong> Planos, carpintería y herramientas.</p>
-          <p className="text-gray-700 mb-2"><strong>Ropa y moda</strong>: Tallas de cintura en pantalones y vaqueros.</p>
-          <p className="text-gray-700 mb-2"><strong>Fotografía</strong>: Tamaños de los sensores de las cámaras.</p>
-          <p className="text-gray-700 mb-4"><strong>Impresión:</strong> Dimensiones del papel (por ejemplo, tamaño del papel 8,5« × 11»).</p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">8. Historia de la pulgada</h3>
-          <p className="text-gray-700 mb-4">
-            La pulgada tiene una larga historia y se originó a partir de diferentes sistemas de medición utilizados en distintas civilizaciones.
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">En la Inglaterra medieval, la pulgada se definía como la anchura del pulgar de un hombre.</li>
-            <li className="mb-2">Más tarde, se estandarizó como tres granos de cebada colocados uno al lado del otro.</li>
-            <li className="mb-2">En 1959, la pulgada internacional fue definida oficialmente como 2,54 cm por el International Yard and Pound Agreement.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">9. Significado y origen del término «pulgada</h3>
-          <p className="text-gray-700 mb-4">
-            La palabra «pulgada» procede del latín «uncia», que significa la doceava parte de una unidad. Originalmente se refería a la doceava parte de un pie romano. Con el tiempo, la pulgada evolucionó hasta su definición moderna y sigue siendo una de las medidas imperiales más utilizadas en la actualidad.
-          </p>
-        </div>
-      </div>
-      
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Conversor de Unidades | Todas las conversiones son precisas según estándares internacionales
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">
