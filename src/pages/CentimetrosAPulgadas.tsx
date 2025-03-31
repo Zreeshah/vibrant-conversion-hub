@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
