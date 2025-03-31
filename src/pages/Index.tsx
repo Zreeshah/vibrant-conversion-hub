@@ -2,7 +2,6 @@ import React from 'react';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
-import ComprehensiveConversionTable from '@/components/ComprehensiveConversionTable';
 
 const Index = () => {
   // 1 inch = 2.54 cm
@@ -121,7 +120,6 @@ const Index = () => {
           />
         </div>
 
-        {/* Nuevo contenido desde Google Docs */}
         <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6" id="origen-pulgada">El origen de la pulgada: historia y evolución</h2>
           <p className="text-gray-700 mb-4">
@@ -306,7 +304,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Nuevo contenido del Google Docs */}
         <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Conversor online de Pulgadas a CM</h2>
           <p className="text-gray-700 mb-4">
@@ -426,7 +423,7 @@ const Index = () => {
 
           <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">3. Las pulgadas en alemán se llaman «Inch» y «Zoll». ¿Son realmente lo mismo?</h3>
           <p className="text-gray-700 mb-4">
-            Sí, en alemán, el término «Zoll» se refiere a una pulgada. La palabra «Inch» se utiliza a veces en contextos anglófonos en Alemania, pero «Zoll» es el término tradicional.
+            Sí, en alemán, el término «Zoll» se refiere a una pulgada. La palabra «Inch�� se utiliza a veces en contextos anglófonos en Alemania, pero «Zoll» es el término tradicional.
           </p>
           <p className="text-gray-700 mb-4">
             Tanto «Zoll» como «Inch» representan la misma medida: 1 Zoll = 1 Inch = 2,54 cm. El término «Zoll» se utiliza habitualmente en los países de habla alemana para referirse a tamaños de pantallas (televisores, monitores), diámetros de tuberías y herramientas industriales.
@@ -456,3 +453,11 @@ const Index = () => {
           </p>
 
           <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
