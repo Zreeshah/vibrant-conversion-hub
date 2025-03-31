@@ -451,9 +451,6 @@ const Index = () => {
           <p className="text-gray-700 mb-4">
             Estas conversiones ayudan en diversas aplicaciones, desde la construcción hasta la fabricación.
           </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">
-          </div>
         </div>
       </div>
     </div>
