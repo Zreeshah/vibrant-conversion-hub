@@ -2,7 +2,6 @@ import React from 'react';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
-import ComprehensiveConversionTable from '@/components/ComprehensiveConversionTable';
 
 const Index = () => {
   // 1 inch = 2.54 cm
@@ -453,6 +452,9 @@ const Index = () => {
             Estas conversiones ayudan en diversas aplicaciones, desde la construcción hasta la fabricación.
           </p>
         </div>
+      </div>
+    </div>
+  );
+};
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="tabla-completa">Tabla
+export default Index;
