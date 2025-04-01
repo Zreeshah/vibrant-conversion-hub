@@ -11,11 +11,10 @@ const NavBar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/0e133287-abe7-4fe8-bc77-9f7dbc1978ad.png" 
+                src="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" 
                 alt="Pulgadas a CM Logo" 
-                className="h-8 w-auto sm:h-10 mr-2"
+                className="h-10 w-auto sm:h-12"
               />
-              <span className="text-xl font-bold text-white hidden sm:inline">Pulgadas a CM</span>
             </Link>
           </div>
           <div className="flex items-center">
