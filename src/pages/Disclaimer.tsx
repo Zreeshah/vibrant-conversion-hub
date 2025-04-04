@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -9,7 +10,7 @@ const Disclaimer = () => {
       <Helmet>
         <title>Aviso Legal - Pulgadas a CM</title>
         <meta name="description" content="Aviso legal de Pulgadas a CM. Información sobre los términos y condiciones de uso de nuestro sitio web." />
-        <link rel="canonical" href="https://pulgadas-a-cm.com/aviso-legal" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/aviso-legal" />
       </Helmet>
       
       <NavBar />

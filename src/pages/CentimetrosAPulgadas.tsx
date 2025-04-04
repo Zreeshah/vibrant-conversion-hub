@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -14,7 +15,7 @@ const CentimetrosAPulgadas = () => {
       <Helmet>
         <title>Conversión de Centímetros a Pulgadas - Calculadora Online Gratis</title>
         <meta name="description" content="Convierte centímetros a pulgadas fácilmente con nuestra calculadora online gratuita. Conversiones precisas e instantáneas de cm a pulgadas para todos tus proyectos." />
-        <link rel="canonical" href="https://pulgadas-a-cm.com/centimetros-a-pulgadas" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/centimetros-a-pulgadas" />
       </Helmet>
       
       <NavBar />

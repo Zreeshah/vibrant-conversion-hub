@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -9,7 +10,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Política de Privacidad - Pulgadas a CM</title>
         <meta name="description" content="Política de privacidad de Pulgadas a CM. Información sobre cómo manejamos tus datos personales." />
-        <link rel="canonical" href="https://pulgadas-a-cm.com/politica-de-privacidad" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/politica-de-privacidad" />
       </Helmet>
       
       <NavBar />

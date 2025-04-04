@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -9,7 +10,7 @@ const ContactUs = () => {
       <Helmet>
         <title>Contacto - Pulgadas a CM</title>
         <meta name="description" content="Contáctanos para cualquier consulta sobre nuestras herramientas de conversión de pulgadas a centímetros y viceversa." />
-        <link rel="canonical" href="https://pulgadas-a-cm.com/contacto" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/contacto" />
       </Helmet>
       
       <NavBar />

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
@@ -14,7 +15,7 @@ const Index = () => {
       <Helmet>
         <title>Conversor de Pulgadas a Centímetros y Centímetros a Pulgadas</title>
         <meta name="description" content="Herramienta gratuita para convertir entre pulgadas y centímetros. Conversión precisa y fácil de usar con tablas de referencia." />
-        <link rel="canonical" href="https://pulgadas-a-cm.com" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net" />
       </Helmet>
       
       <NavBar />

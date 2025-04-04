@@ -19,7 +19,9 @@ const NotFound = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
-        <title>404 Not Found</title>
+        <title>404 Not Found - Pulgadas a CM</title>
+        <meta name="description" content="Página no encontrada. Vuelve a la página principal para continuar utilizando nuestras herramientas de conversión." />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/404" />
       </Helmet>
       <NavBar />
       

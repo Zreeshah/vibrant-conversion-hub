@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
@@ -15,6 +14,7 @@ const PulgadasAMm = () => {
       <Helmet>
         <title>Conversor de Pulgadas a Milímetros</title>
         <meta name="description" content="Convierte fácilmente pulgadas a milímetros con nuestra calculadora gratuita." />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/pulgadas-a-mm" />
       </Helmet>
       <NavBar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
