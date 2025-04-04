@@ -11,7 +11,7 @@ const NavBar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" 
+                src="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" 
                 alt="Pulgadas a CM Logo" 
                 className="h-10 w-auto sm:h-12"
               />
