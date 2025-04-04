@@ -15,7 +15,7 @@ const Index = () => {
       <Helmet>
         <title>Conversor de Pulgadas a Centímetros y Centímetros a Pulgadas</title>
         <meta name="description" content="Herramienta gratuita para convertir entre pulgadas y centímetros. Conversión precisa y fácil de usar con tablas de referencia." />
-        <link rel="canonical" href="https://pulgadas-a-cm.net" />
+        <link rel="canonical" href="https://pulgadas-a-cm.net/" />
       </Helmet>
       
       <NavBar />
