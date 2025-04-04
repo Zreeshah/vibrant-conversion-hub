@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
@@ -26,14 +27,27 @@ const PulgadasAMm = () => {
           </p>
         </div>
 
-        <div className="max-w-md mx-auto mb-12">
-          <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Milímetros</h2>
-          <ConversorCalculator 
-            fromUnit="Pulgadas" 
-            toUnit="Milímetros" 
-            conversionFactor={inchToMmFactor} 
-            placeholder="Ingresa pulgadas"
-          />
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Milímetros</h2>
+            <ConversorCalculator 
+              fromUnit="Pulgadas" 
+              toUnit="Milímetros" 
+              conversionFactor={inchToMmFactor} 
+              placeholder="Ingresa pulgadas"
+            />
+          </div>
+          
+          <div>
+            <h2 className="text-xl font-semibold mb-4 text-center">Milímetros a Pulgadas</h2>
+            <ConversorCalculator 
+              fromUnit="Milímetros" 
+              toUnit="Pulgadas" 
+              conversionFactor={inchToMmFactor} 
+              reverse={true}
+              placeholder="Ingresa milímetros"
+            />
+          </div>
         </div>
 
         <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
@@ -73,6 +87,17 @@ const PulgadasAMm = () => {
           <p className="text-gray-700">
             Esta equivalencia precisa (1 in = 25.4 mm) es fundamental para realizar conversiones exactas entre el sistema métrico y el sistema imperial.
           </p>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="tabla-conversion-inversa">Tabla de conversión de milímetros a pulgadas</h2>
+          <ConversionTable 
+            fromUnit="Milímetro" 
+            toUnit="Pulgada" 
+            conversionFactor={inchToMmFactor} 
+            maxRows={10}
+            reverse={true}
+          />
         </div>
 
         <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
