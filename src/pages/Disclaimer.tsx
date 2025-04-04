@@ -1,11 +1,11 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const Disclaimer = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
         <title>Aviso Legal - Pulgadas a CM</title>
         <meta name="description" content="Aviso legal de Pulgadas a CM. Información sobre los términos y condiciones de uso de nuestro sitio web." />
@@ -14,7 +14,7 @@ const Disclaimer = () => {
       
       <NavBar />
       
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Aviso Legal</h1>
           
@@ -63,6 +63,8 @@ const Disclaimer = () => {
           </p>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

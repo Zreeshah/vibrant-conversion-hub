@@ -3,13 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   // 1 inch = 2.54 cm
   const inchToCmFactor = 2.54;
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
         <title>Conversor de Pulgadas a Centímetros y Centímetros a Pulgadas</title>
         <meta name="description" content="Herramienta gratuita para convertir entre pulgadas y centímetros. Conversión precisa y fácil de usar con tablas de referencia." />
@@ -18,7 +19,7 @@ const Index = () => {
       
       <NavBar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-2">
             Conversor de Pulgadas a Centímetros
@@ -461,6 +462,8 @@ const Index = () => {
           </p>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

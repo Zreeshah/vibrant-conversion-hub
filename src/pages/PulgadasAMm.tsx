@@ -1,17 +1,22 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const PulgadasAMm = () => {
   // 1 inch = 25.4 mm
   const inchToMmFactor = 25.4;
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Helmet>
+        <title>Conversor de Pulgadas a Milímetros</title>
+        <meta name="description" content="Convierte fácilmente pulgadas a milímetros con nuestra calculadora gratuita." />
+      </Helmet>
       <NavBar />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-2">
             Conversor de Pulgadas a Milímetros
@@ -96,13 +101,7 @@ const PulgadasAMm = () => {
         </div>
       </div>
       
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Conversor de Unidades | Todas las conversiones son precisas según estándares internacionales
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
