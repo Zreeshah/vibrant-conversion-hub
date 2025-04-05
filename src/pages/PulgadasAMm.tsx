@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
@@ -43,8 +44,7 @@ const PulgadasAMm = () => {
             <ConversorCalculator 
               fromUnit="Milímetros" 
               toUnit="Pulgadas" 
-              conversionFactor={inchToMmFactor} 
-              reverse={true}
+              conversionFactor={1/inchToMmFactor} 
               placeholder="Ingresa milímetros"
             />
           </div>
