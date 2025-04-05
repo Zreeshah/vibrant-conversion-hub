@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -32,7 +31,7 @@ const CentimetrosAPulgadas = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
-            <h2 className="text-xl font-semibold mb-4 text-center">Calculadora de Centímetros a Pulgadas</h2>
+            <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
             <ConversorCalculator 
               fromUnit="Centímetros" 
               toUnit="Pulgadas" 
@@ -46,7 +45,6 @@ const CentimetrosAPulgadas = () => {
               fromUnit="Pulgadas" 
               toUnit="Centímetros" 
               conversionFactor={1/cmToInchFactor} 
-              reverse={true}
               placeholder="Ingresa pulgadas"
             />
           </div>
