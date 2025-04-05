@@ -27,6 +27,7 @@
   for = "/lovable-uploads/*"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/jpeg, image/png, image/webp"
 
 [[headers]]
   for = "/*.woff2"
@@ -43,3 +44,27 @@
   for = "/*.(js|css|html|svg|webp|jpg|png)"
     [headers.values]
     Content-Encoding = "br, gzip"
+
+# Security headers to improve performance score
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Set correct content type for images to prevent issues
+[[headers]]
+  for = "/*.jpg"
+    [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "/*.png"
+    [headers.values]
+    Content-Type = "image/png"
+
+[[headers]]
+  for = "/*.webp"
+    [headers.values]
+    Content-Type = "image/webp"

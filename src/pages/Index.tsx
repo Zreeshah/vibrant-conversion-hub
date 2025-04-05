@@ -1,3 +1,4 @@
+
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -32,7 +33,7 @@ const Index = () => {
             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
               Convierte Pulgadas a Centímetros Fácilmente
             </h1>
-            <p className="mt-4 text-xl sm:text-2xl max-w-2xl mx-auto">
+            <p className="mt-4 text-xl sm:text-2xl max-w-2xl mx-auto font-medium">
               Nuestra calculadora online te permite convertir pulgadas a centímetros de forma rápida y precisa. ¡Ideal para tus proyectos y cálculos diarios!
             </p>
             <div className="mt-8 flex justify-center">
@@ -46,6 +47,12 @@ const Index = () => {
         {/* Introduction section with optimized LCP */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Adding high-priority to IntroText to improve LCP */}
+            <div className="prose prose-lg mx-auto max-w-4xl">
+              <p className="text-lg font-medium leading-relaxed mb-4">
+                La conversión de pulgadas a centímetros es esencial para diversos campos, como la educación, la construcción, la sastrería y los proyectos de bricolaje.
+              </p>
+            </div>
             <IntroText />
           </div>
         </section>
@@ -93,7 +100,7 @@ const Index = () => {
             <div className="prose prose-lg mx-auto max-w-4xl">
               <h2>Conversor online de Pulgadas a CM</h2>
               
-              {/* WebP Infographic with explicit dimensions */}
+              {/* Fixed infographics image with correct dimensions and aspect ratio */}
               <div className="my-8 flex justify-center">
                 <OptimizedImage 
                   src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png"
@@ -101,6 +108,7 @@ const Index = () => {
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   width={600}
                   height={400}
+                  priority={true}
                 />
               </div>
               

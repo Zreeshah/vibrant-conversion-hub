@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface OptimizedImageProps {
@@ -18,10 +17,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = "", 
   priority = false 
 }) => {
-  // Convert jpg/png paths to webp if they're from lovable-uploads
-  const webpSrc = src.includes('lovable-uploads') && (src.endsWith('.jpg') || src.endsWith('.png')) 
-    ? src.substring(0, src.lastIndexOf('.')) + '.webp'
-    : src;
+  // Only try to convert to webp if it's a jpg or png file
+  // Keep the original path for other file types
+  let webpSrc = src;
+  
+  if (src.includes('lovable-uploads') && (src.endsWith('.jpg') || src.endsWith('.png'))) {
+    // For lovable uploads, keep the original format to avoid broken images
+    webpSrc = src;
+  }
   
   return (
     <img
@@ -33,6 +36,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
+      style={{ aspectRatio: `${width} / ${height}` }}
     />
   );
 };
