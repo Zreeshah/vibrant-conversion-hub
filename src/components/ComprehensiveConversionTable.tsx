@@ -1,67 +1,42 @@
 
 import React from 'react';
-import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@/components/ui/table';
 
-const ComprehensiveConversionTable = () => {
-  // Calculate conversions from 1 to 500 inches
-  const generateTableData = () => {
-    const inchToCmFactor = 2.54;
+interface ComprehensiveConversionTableProps {
+  conversionFactor: number;
+}
+
+const ComprehensiveConversionTable: React.FC<ComprehensiveConversionTableProps> = ({ conversionFactor }) => {
+  // Generate conversion values for a comprehensive table
+  const generateTableRows = () => {
     const rows = [];
-    const columnsPerRow = 5;
-    const totalInches = 500;
-    
-    for (let i = 0; i < totalInches; i += columnsPerRow) {
-      const rowData = [];
-      
-      for (let j = 0; j < columnsPerRow; j++) {
-        const inch = i + j + 1;
-        if (inch <= totalInches) {
-          rowData.push({
-            inch,
-            cm: (inch * inchToCmFactor).toFixed(2)
-          });
-        }
-      }
-      
-      rows.push(rowData);
+    for (let i = 1; i <= 100; i += 5) {
+      const inches = i;
+      const cm = (inches * conversionFactor).toFixed(2);
+      rows.push({ inches, cm });
     }
-    
     return rows;
   };
 
-  const tableData = generateTableData();
+  const tableRows = generateTableRows();
 
   return (
-    <div className="w-full overflow-auto">
-      <Table className="w-full text-sm">
-        <TableHeader>
-          <TableRow className="bg-gray-100">
-            {Array(5).fill(0).map((_, index) => (
-              <TableHead key={index} className="py-3 px-3 text-center font-semibold">
-                Pulgadas » cm
-              </TableHead>
-            ))}
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {tableData.map((row, rowIndex) => (
-            <TableRow 
-              key={rowIndex} 
-              className={rowIndex % 2 === 0 ? "bg-white" : "bg-gray-50"}
-            >
-              {row.map((cell, cellIndex) => (
-                <TableCell key={cellIndex} className="py-2 px-3 text-center border-b border-gray-200">
-                  {cell.inch} Pulgadas » {cell.cm} cm
-                </TableCell>
-              ))}
-              {/* Fill empty cells if row is not complete */}
-              {row.length < 5 && Array(5 - row.length).fill(0).map((_, i) => (
-                <TableCell key={`empty-${i}`} className="py-2 px-3 border-b border-gray-200"></TableCell>
-              ))}
-            </TableRow>
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 px-4 py-2 text-left">Pulgadas</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Centímetros</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows.map(row => (
+            <tr key={row.inches} className="hover:bg-gray-50">
+              <td className="border border-gray-300 px-4 py-2">{row.inches}</td>
+              <td className="border border-gray-300 px-4 py-2">{row.cm}</td>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
+        </tbody>
+      </table>
     </div>
   );
 };
