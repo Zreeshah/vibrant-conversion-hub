@@ -90,6 +90,19 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg mx-auto max-w-4xl">
               <h2>Conversor online de Pulgadas a CM</h2>
+              
+              {/* Infographic added here */}
+              <div className="my-8 flex justify-center">
+                <img 
+                  src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png" 
+                  alt="Pulgadas a CM" 
+                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  width="600"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+              
               <p>Nuestro conversor de Pulgadas a CM es una herramienta sencilla y eficaz diseñada para proporcionar conversiones rápidas y precisas. Tanto si necesita convertir pulgadas a centímetros para uso académico, profesional o personal, esta calculadora le garantiza resultados precisos al instante.</p>
               <ul>
                 <li>
