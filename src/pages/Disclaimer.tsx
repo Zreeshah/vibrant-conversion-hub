@@ -9,7 +9,7 @@ const Disclaimer = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
         <title>Aviso Legal - Pulgadas a CM</title>
-        <meta name="description" content="Aviso legal de Pulgadas a CM. Información sobre los términos y condiciones de uso de nuestro sitio web." />
+        <meta name="description" content="Aviso legal de nuestra calculadora de conversión de unidades. Información sobre los términos y condiciones de uso de nuestro conversor online." />
         <link rel="canonical" href="https://pulgadas-a-cm.net/aviso-legal" />
       </Helmet>
       

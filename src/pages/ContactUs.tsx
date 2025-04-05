@@ -9,7 +9,7 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
         <title>Contacto - Pulgadas a CM</title>
-        <meta name="description" content="Contáctanos para cualquier consulta sobre nuestras herramientas de conversión de pulgadas a centímetros y viceversa." />
+        <meta name="description" content="Contacta con nosotros para cualquier consulta sobre conversiones de pulgadas a centímetros o para sugerencias sobre nuestra calculadora online." />
         <link rel="canonical" href="https://pulgadas-a-cm.net/contacto" />
       </Helmet>
       

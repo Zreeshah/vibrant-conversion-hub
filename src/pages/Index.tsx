@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
 import ConversionTable from '@/components/ConversionTable';
+import ComprehensiveConversionTable from '@/components/ComprehensiveConversionTable';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
@@ -12,456 +13,146 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
-        <title>Conversor de Pulgadas a Centímetros y Centímetros a Pulgadas</title>
-        <meta name="description" content="Herramienta gratuita para convertir entre pulgadas y centímetros. Conversión precisa y fácil de usar con tablas de referencia." />
+        <title>Conversor de Pulgadas a Centímetros - Calculadora Online</title>
+        <meta name="description" content="Convierte pulgadas a cm fácilmente con nuestra calculadora online gratuita. Conversiones precisas e instantáneas para todos tus proyectos." />
         <link rel="canonical" href="https://pulgadas-a-cm.net/" />
       </Helmet>
       
       <NavBar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-2">
-            Conversor de Pulgadas a Centímetros
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Convierte fácilmente entre pulgadas y centímetros con nuestras calculadoras gratuitas.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Centímetros</h2>
-            <ConversorCalculator 
-              fromUnit="Pulgadas" 
-              toUnit="Centímetros" 
-              conversionFactor={inchToCmFactor} 
-              placeholder="Ingresa pulgadas"
-            />
+      {/* Main content */}
+      <main className="flex-grow">
+        {/* Hero section */}
+        <section className="bg-blue-500 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+              Convierte Pulgadas a Centímetros Fácilmente
+            </h1>
+            <p className="mt-4 text-xl sm:text-2xl max-w-2xl mx-auto">
+              Nuestra calculadora online te permite convertir pulgadas a centímetros de forma rápida y precisa. ¡Ideal para tus proyectos y cálculos diarios!
+            </p>
+            <div className="mt-8 flex justify-center">
+              <a href="#calculadoras" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:px-8">
+                Comienza a Convertir
+              </a>
+            </div>
           </div>
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
-            <ConversorCalculator 
-              fromUnit="Pulgadas" 
-              toUnit="Centímetros" 
-              conversionFactor={inchToCmFactor}
-              reverse={true} 
-              placeholder="Ingresa centímetros"
-            />
+        </section>
+
+        {/* Calculators section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Calculadoras de Conversión
+              </h2>
+              <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                Herramientas precisas para convertir entre pulgadas y centímetros al instante.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Centímetros</h2>
+                <ConversorCalculator 
+                  fromUnit="Pulgadas" 
+                  toUnit="Centímetros" 
+                  conversionFactor={inchToCmFactor} 
+                  placeholder="Ingresa pulgadas"
+                />
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
+                <ConversorCalculator 
+                  fromUnit="Centímetros" 
+                  toUnit="Pulgadas" 
+                  conversionFactor={1/inchToCmFactor} 
+                  placeholder="Ingresa centímetros"
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <p className="text-gray-700 mb-4">
-            La conversión de pulgadas a centímetros es esencial para diversos campos, como la educación, la construcción, la sastrería y los proyectos de bricolaje. Tanto si está trabajando en una tarea de mejora del hogar, comprando productos internacionales o completando una tarea escolar, disponer de una herramienta de conversión precisa y fiable puede ahorrarle tiempo y evitar errores.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Nuestro conversor gratuito en línea de Pulgadas a CM proporciona resultados instantáneos y precisos, eliminando la necesidad de realizar cálculos manuales. Con una interfaz fácil de usar, esta herramienta garantiza que cualquiera -estudiantes, profesionales o usuarios cotidianos- pueda convertir fácilmente pulgadas a centímetros en sólo unos clics. Pruébelo ahora y simplifique sus conversiones de medidas.
-          </p>
-        </div>
+        {/* Content sections */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                ¿Por qué usar nuestra calculadora?
+              </h2>
+              <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                Nuestra calculadora de pulgadas a centímetros ofrece precisión, rapidez y facilidad de uso. Ya sea para proyectos de bricolaje, diseño o educación, te proporcionamos las herramientas necesarias para realizar conversiones exactas.
+              </p>
+            </div>
 
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="como-convertir">¿Cómo convertir pulgadas a cm?</h2>
-          <p className="text-gray-700 mb-4">
-            Convertir pulgadas a centímetros es muy sencillo: sólo multiplica el valor en pulgadas por 2.54 para obtener el equivalente en centímetros. Esta conversión se basa en la definición estándar de que 1 pulgada equivale exactamente a 2.54 centímetros.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Por ejemplo, para convertir 5 pulgadas a centímetros:
-          </p>
-          <p className="text-gray-700 mb-4 font-semibold">
-            5 pulgadas × 2.54 = 12.7 centímetros
-          </p>
-          <p className="text-gray-700">
-            Nuestra calculadora hace este cálculo automáticamente: sólo ingresa el valor en pulgadas y obtendrás al instante su equivalente en centímetros.
-          </p>
-        </div>
-
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="tabla-conversion">Tabla de conversión de pulgadas a centímetros</h2>
-          <ConversionTable 
-            fromUnit="Pulgada" 
-            toUnit="Centímetro" 
-            conversionFactor={inchToCmFactor} 
-            maxRows={10}
-          />
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="cuantos-cm">¿Cuántos cm tiene una pulgada?</h2>
-          <p className="text-gray-700 mb-4">
-            <strong>1 pulgada equivale exactamente a 2.54 centímetros.</strong> Esta es una conversión estándar reconocida internacionalmente.
-          </p>
-          <p className="text-gray-700 mb-4">
-            La pulgada (símbolo: in) es una unidad de longitud del sistema imperial que se utiliza principalmente en Estados Unidos, Reino Unido y Canadá. El centímetro (símbolo: cm) pertenece al sistema métrico y es utilizado en la mayoría de los países del mundo.
-          </p>
-          <p className="text-gray-700">
-            Conocer esta equivalencia (1 in = 2.54 cm) es esencial para convertir correctamente entre estos dos sistemas de medida diferentes.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="cm-a-pulgadas">Convertir centímetros a pulgadas fácilmente</h2>
-          <p className="text-gray-700 mb-4">
-            Para convertir de centímetros a pulgadas, simplemente divide el valor en centímetros entre 2.54. Esta operación te dará el equivalente en pulgadas.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Por ejemplo, para convertir 20 centímetros a pulgadas:
-          </p>
-          <p className="text-gray-700 mb-4 font-semibold">
-            20 cm ÷ 2.54 = 7.87 pulgadas
-          </p>
-          <p className="text-gray-700 mb-4">
-            Nuestra calculadora de "Centímetros a Pulgadas" automatiza este cálculo para ti. Solo necesitas ingresar el valor en centímetros y obtendrás instantáneamente su equivalente en pulgadas.
-          </p>
-          <p className="text-gray-700">
-            Esta conversión es útil cuando necesitas medir elementos diseñados con el sistema métrico pero necesitas las dimensiones en el sistema imperial, o viceversa.
-          </p>
-        </div>
-
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Tabla de conversión de centímetros a pulgadas</h2>
-          <ConversionTable 
-            fromUnit="Centímetro" 
-            toUnit="Pulgada" 
-            conversionFactor={inchToCmFactor} 
-            maxRows={10}
-            reverse={true}
-          />
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="origen-pulgada">El origen de la pulgada: historia y evolución</h2>
-          <p className="text-gray-700 mb-4">
-            La <strong>pulgada</strong> tiene un origen fascinante que se remonta a la antigüedad. Inicialmente, en la Inglaterra medieval, se definía como <strong>la longitud de tres granos de cebada colocados de punta a punta</strong>. Con el tiempo, esta medida se estandarizó de diferentes formas hasta que en 1959, mediante un acuerdo internacional, se estableció definitivamente que <strong>una pulgada equivale exactamente a 2.54 centímetros</strong>.
-          </p>
-          <p className="text-gray-700 mb-4">
-            La palabra "pulgada" deriva del latín "<em>uncia</em>", que representaba la duodécima parte de un pie romano. Este origen explica por qué en muchos idiomas el término para pulgada está relacionado con el número doce o con fracciones:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">En inglés: "<em>inch</em>" (del antiguo inglés "<em>ynce</em>")</li>
-            <li className="mb-2">En español: "pulgada" (relacionada con el pulgar)</li>
-            <li className="mb-2">En alemán: "<em>Zoll</em>" (relacionada con peaje o aduana)</li>
-          </ul>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="uso-pulgada">Usos comunes de las pulgadas en la actualidad</h2>
-          <p className="text-gray-700 mb-4">
-            Aunque el sistema métrico predomina globalmente, las <strong>pulgadas</strong> siguen siendo ampliamente utilizadas en diversos contextos:
-          </p>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Electrónica y tecnología</h3>
-          <p className="text-gray-700 mb-4">
-            Las pantallas de dispositivos electrónicos se miden comúnmente en pulgadas. Por ejemplo:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Televisores: 32", 43", 55", 65", etc.</li>
-            <li className="mb-2">Monitores: 24", 27", 32", etc.</li>
-            <li className="mb-2">Tablets y smartphones: 6.7", 10.9", 12.9", etc.</li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Construcción y bricolaje</h3>
-          <p className="text-gray-700 mb-4">
-            En países como Estados Unidos, Canadá y Reino Unido, los materiales de construcción se dimensionan en pulgadas:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Tablones de madera: 2×4", 2×6", etc.</li>
-            <li className="mb-2">Tuberías: 1/2", 3/4", 1", etc.</li>
-            <li className="mb-2">Tornillos y clavos: 1", 2", 3", etc.</li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Neumáticos y llantas</h3>
-          <p className="text-gray-700 mb-4">
-            El diámetro de las llantas de vehículos se expresa en pulgadas en todo el mundo:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Neumáticos: 15", 17", 19", etc.</li>
-          </ul>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="fracciones-pulgada">Fracciones de pulgada y su conversión a centímetros</h2>
-          <p className="text-gray-700 mb-4">
-            En el sistema imperial, es común expresar las medidas en <strong>fracciones de pulgada</strong>. Esto es particularmente frecuente en herramientas, tornillería y carpintería. A continuación, presentamos una tabla con las conversiones más utilizadas:
-          </p>
-          
-          <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm mb-6">
-            <table className="min-w-full">
-              <thead>
-                <tr className="bg-gray-100 border-b border-gray-200">
-                  <th className="py-3 px-3 text-center text-sm font-semibold border-r border-gray-200">Fracción de pulgada</th>
-                  <th className="py-3 px-3 text-center text-sm font-semibold border-r border-gray-200">Decimal (pulgadas)</th>
-                  <th className="py-3 px-3 text-center text-sm font-semibold">Centímetros</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="bg-white">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1/16"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.0625"</td>
-                  <td className="py-2 px-3 text-center">0.159 cm</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1/8"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.125"</td>
-                  <td className="py-2 px-3 text-center">0.318 cm</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1/4"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.25"</td>
-                  <td className="py-2 px-3 text-center">0.635 cm</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">3/8"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.375"</td>
-                  <td className="py-2 px-3 text-center">0.953 cm</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1/2"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.5"</td>
-                  <td className="py-2 px-3 text-center">1.27 cm</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">5/8"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.625"</td>
-                  <td className="py-2 px-3 text-center">1.588 cm</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">3/4"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">0.75"</td>
-                  <td className="py-2 px-3 text-center">1.905 cm</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1"</td>
-                  <td className="py-2 px-3 text-center border-r border-gray-200">1.0"</td>
-                  <td className="py-2 px-3 text-center">2.54 cm</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Precisión garantizada</h3>
+                <p className="text-gray-600">
+                  Utilizamos la fórmula estándar para asegurar que cada conversión sea lo más precisa posible.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fácil de usar</h3>
+                <p className="text-gray-600">
+                  Nuestra interfaz intuitiva permite realizar conversiones con solo unos pocos clics, sin necesidad de conocimientos técnicos.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Resultados instantáneos</h3>
+                <p className="text-gray-600">
+                  Obtén tus conversiones al instante, ahorrando tiempo y esfuerzo en tus tareas diarias.
+                </p>
+              </div>
+            </div>
           </div>
-          
-          <p className="text-gray-700 mb-4">
-            Para convertir cualquier fracción de pulgada a centímetros, puedes seguir estos pasos:
-          </p>
-          <ol className="list-decimal pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Convierte la fracción a su equivalente decimal (divide el numerador entre el denominador)</li>
-            <li className="mb-2">Multiplica el resultado por 2.54 para obtener el valor en centímetros</li>
-          </ol>
-          <p className="text-gray-700">
-            Por ejemplo, para convertir 5/16 de pulgada a centímetros: (5÷16) × 2.54 = 0.3125 × 2.54 = 0.794 cm
-          </p>
-        </div>
+        </section>
 
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="pulgadas-cm-vida-diaria">Pulgadas vs centímetros en la vida diaria</h2>
-          <p className="text-gray-700 mb-4">
-            La preferencia por el uso de <strong>pulgadas</strong> o <strong>centímetros</strong> varía según el país y el contexto. Mientras que en <strong>Estados Unidos</strong> las pulgadas son la medida estándar, en la mayoría de países del mundo se utiliza el <strong>sistema métrico</strong> con los centímetros como unidad principal para dimensiones pequeñas.
-          </p>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Ventajas del sistema métrico (cm)</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Es <strong>decimal</strong>, lo que facilita los cálculos</li>
-            <li className="mb-2">Es más <strong>consistente</strong> y fácil de convertir entre unidades</li>
-            <li className="mb-2">Es el estándar en <strong>ciencia y medicina</strong> en todo el mundo</li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Ventajas del sistema imperial (pulgadas)</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Las medidas son <strong>más intuitivas</strong> para algunos tipos de estimaciones</li>
-            <li className="mb-2">Se divide fácilmente en <strong>fracciones</strong> (mitades, cuartos, octavos)</li>
-            <li className="mb-2">Está <strong>establecido</strong> en sectores específicos como la tecnología y la aviación</li>
-          </ul>
-        </div>
+        {/* Comprehensive table */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Tabla de Conversión Completa
+              </h2>
+              <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                Encuentra rápidamente la conversión que necesitas en nuestra tabla detallada de pulgadas a centímetros.
+              </p>
+            </div>
+            <ComprehensiveConversionTable conversionFactor={inchToCmFactor} />
+          </div>
+        </section>
+        
+        {/* FAQ section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Preguntas Frecuentes
+              </h2>
+              <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                Resolvemos tus dudas más comunes sobre la conversión de pulgadas a centímetros.
+              </p>
+            </div>
 
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6" id="pulgada-sectores-profesionales">La pulgada en sectores profesionales</h2>
-          <p className="text-gray-700 mb-4">
-            Varios sectores profesionales mantienen el uso de <strong>pulgadas</strong> como unidad de medida estándar, incluso en países donde el sistema métrico es predominante:
-          </p>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Tecnología</h3>
-          <p className="text-gray-700 mb-4">
-            En el mundo de la tecnología, las pantallas se miden universalmente en pulgadas, midiendo la diagonal de la pantalla:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Un iPhone 14 Pro Max tiene una pantalla de <strong>6.7 pulgadas</strong> (17.02 cm)</li>
-            <li className="mb-2">Un iPad Pro grande tiene <strong>12.9 pulgadas</strong> (32.77 cm)</li>
-            <li className="mb-2">Los monitores se ofrecen en tamaños como <strong>24", 27", 32"</strong></li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Fontanería y tuberías</h3>
-          <p className="text-gray-700 mb-4">
-            El diámetro de tuberías y accesorios de fontanería se especifica habitualmente en pulgadas:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Tuberías domésticas: <strong>1/2", 3/4", 1"</strong></li>
-            <li className="mb-2">Desagües: <strong>1-1/4", 1-1/2", 2"</strong></li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Aviación</h3>
-          <p className="text-gray-700 mb-4">
-            La industria aeronáutica utiliza pulgadas para muchas especificaciones:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">La posición de los asientos (pitch): <strong>30" a 32"</strong> en clase turista</li>
-            <li className="mb-2">Componentes estructurales y mecánicos</li>
-          </ul>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Impresión y papel</h3>
-          <p className="text-gray-700">
-            Los formatos de papel en EE.UU. se basan en pulgadas, a diferencia del estándar internacional ISO:
-            <strong>Carta (8.5" × 11")</strong> vs. A4 (210 mm × 297 mm)
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Conversor online de Pulgadas a CM</h2>
-          <p className="text-gray-700 mb-4">
-            Nuestro conversor de Pulgadas a CM es una herramienta sencilla y eficaz diseñada para proporcionar conversiones rápidas y precisas. Tanto si necesita convertir pulgadas a centímetros para uso académico, profesional o personal, esta calculadora le garantiza resultados precisos al instante.
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Cómo utilizar el Conversor de Pulgadas a CM:</li>
-            <li className="mb-2">Introduzca el valor en pulgadas en el cuadro de entrada.</li>
-            <li className="mb-2">Haga clic en el botón «Convertir» para obtener el resultado.</li>
-            <li className="mb-2">Visualice el resultado en centímetros al instante.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Ejemplo de conversión:</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">10 pulgadas = 25,4 cm</li>
-            <li className="mb-2">25 pulgadas = 63,5 cm</li>
-            <li className="mb-2">50 pulgadas = 127 cm</li>
-          </ul>
-          
-          <p className="text-gray-700 mt-4">
-            Pruebe ahora nuestra calculadora gratuita de pulgadas a cm y simplifique sus conversiones sin esfuerzo.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Fórmula de conversión de Pulgadas a CM</h2>
-          <p className="text-gray-700 mb-4">
-            Convertir pulgadas a centímetros es muy sencillo utilizando la fórmula de conversión estándar:
-          </p>
-          <p className="text-gray-700 mb-4 font-semibold text-center py-2 bg-gray-50 rounded">
-            Centímetros = Pulgadas × 2.54
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">Ejemplo de cálculo:</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">5 pulgadas × 2,54 = 12,7 cm</li>
-            <li className="mb-2">12 pulgadas × 2,54 = 30,48 cm</li>
-            <li className="mb-2">20 pulgadas × 2,54 = 50,8 cm</li>
-          </ul>
-          
-          <p className="text-gray-700">
-            Esta fórmula garantiza conversiones precisas para varias medidas, facilitando el cambio entre pulgadas y centímetros para cualquier aplicación.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Aplicaciones comunes de la conversión de pulgadas a centímetros</h2>
-          <p className="text-gray-700 mb-4">
-            La conversión de pulgadas a centímetros se utiliza ampliamente en diversas industrias y tareas cotidianas. He aquí algunas aplicaciones comunes:
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">1. Educación y estudios académicos</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Se utiliza en tareas de matemáticas, física e ingeniería.</li>
-            <li className="mb-2">Imprescindible para aprender sistemas de medida y conversiones de unidades.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">2. Mejoras en el hogar y proyectos de bricolaje</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Medición de las dimensiones de muebles para la decoración y renovación del hogar.</li>
-            <li className="mb-2">Garantizar cortes precisos en proyectos de carpintería y construcción.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">3. Moda y sastrería</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Conversión de medidas de ropa entre diferentes estándares de tallaje.</li>
-            <li className="mb-2">Útil para modistas, diseñadores y compradores en línea.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">4. Deporte y forma física</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Medición de la estatura, la envergadura de los brazos y otras dimensiones corporales.</li>
-            <li className="mb-2">Estandarización de tallas de equipamiento (por ejemplo, raquetas de tenis, palos de golf).</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">5. Viajes y compras internacionales</h3>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Conocer las restricciones de tamaño del equipaje en los distintos países.</li>
-            <li className="mb-2">Comparar las dimensiones de los productos al comprar por Internet en todo el mundo.</li>
-          </ul>
-
-          <p className="text-gray-700 mt-4">
-            Tanto si eres estudiante, aficionado al bricolaje, deportista o viajero, la conversión de pulgadas a centímetros ayuda a garantizar la precisión de las medidas en diversos campos. Pruebe nuestra calculadora gratuita de pulgadas a centímetros para obtener resultados instantáneos.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">FAQs - Conversión de Pulgadas a CM</h2>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">1. ¿Qué entendemos por «pulgada»?</h3>
-          <p className="text-gray-700 mb-4">
-            Una pulgada es una unidad de longitud en los sistemas de medida imperial y consuetudinario de Estados Unidos. Se utiliza habitualmente en Estados Unidos, Canadá y Reino Unido para medir distancias pequeñas, tamaños de pantalla y objetos.
-          </p>
-          <p className="text-gray-700 mb-4">
-            La pulgada se abrevia como «in» o se representa con el símbolo doble primo ("). Por ejemplo, 12 pulgadas puede escribirse como 12 in o 12″.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Una pulgada se define oficialmente como 2,54 centímetros (cm) en el sistema métrico decimal.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">2. ¿Cómo puedo convertir pulgadas en centímetros?</h3>
-          <p className="text-gray-700 mb-4">
-            Convertir pulgadas a centímetros es sencillo utilizando la fórmula estándar:
-          </p>
-          <p className="text-gray-700 mb-4 font-semibold">
-            Centímetros = Pulgadas × 2,54
-          </p>
-          <p className="text-gray-700 mb-2">Por ejemplo:</p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">5 pulgadas × 2,54 = 12,7 cm</li>
-            <li className="mb-2">10 pulgadas × 2,54 = 25,4 cm</li>
-            <li className="mb-2">20 pulgadas × 2,54 = 50,8 cm</li>
-          </ul>
-          <p className="text-gray-700 mb-4">
-            Para facilitar las conversiones, puedes utilizar una calculadora online de pulgadas a cm para obtener resultados instantáneos.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">3. Las pulgadas en alemán se llaman «Inch» y «Zoll». ¿Son realmente lo mismo?</h3>
-          <p className="text-gray-700 mb-4">
-            Sí, en alemán, el término «Zoll» se refiere a una pulgada. La palabra «Inch se utiliza a veces en contextos anglófonos en Alemania, pero «Zoll» es el término tradicional.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Tanto «Zoll» como «Inch» representan la misma medida: 1 Zoll = 1 Inch = 2,54 cm. El término «Zoll» se utiliza habitualmente en los países de habla alemana para referirse a tamaños de pantallas (televisores, monitores), diámetros de tuberías y herramientas industriales.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">4. ¿Qué se entiende por «centímetro»?</h3>
-          <p className="text-gray-700 mb-4">
-            Un centímetro (cm) es una unidad de longitud del sistema métrico decimal, ampliamente utilizado en todo el mundo excepto en Estados Unidos y otros pocos países que siguen las medidas imperiales.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Un centímetro equivale a 0,3937 pulgadas, y se utiliza habitualmente para medir objetos, dimensiones corporales y distancias en la vida cotidiana.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-3">5. Conversión de pulgadas a otras unidades</h3>
-          <p className="text-gray-700 mb-4">
-            Las pulgadas pueden convertirse a diferentes unidades utilizando los siguientes tipos de conversión:
-          </p>
-          <ul className="list-disc pl-6 mb-4 text-gray-700">
-            <li className="mb-2">Pulgadas a centímetros: 1 pulgada = 2,54 cm</li>
-            <li className="mb-2">Pulgadas a milímetros: 1 pulgada = 25,4 mm</li>
-            <li className="mb-2">Pulgadas a pies: 1 pulgada = 0,0833 pies</li>
-            <li className="mb-2">Pulgadas a metros 1 pulgada = 0,0254 metros</li>
-            <li className="mb-2">Pulgadas a yardas: 1 pulgada = 0,0278 yardas</li>
-          </ul>
-          <p className="text-gray-700 mb-4">
-            Estas conversiones ayudan en diversas aplicaciones, desde la construcción hasta la fabricación.
-          </p>
-        </div>
-      </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">¿Cómo convierto pulgadas a centímetros?</h3>
+                <p className="text-gray-600">
+                  Multiplica el número de pulgadas por 2.54 para obtener el equivalente en centímetros.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">¿Es precisa la calculadora?</h3>
+                <p className="text-gray-600">
+                  Sí, nuestra calculadora utiliza la fórmula estándar y proporciona resultados precisos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       
       <Footer />
     </div>

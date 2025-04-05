@@ -19,9 +19,10 @@ const NotFound = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
-        <title>404 Not Found - Pulgadas a CM</title>
-        <meta name="description" content="Página no encontrada. Vuelve a la página principal para continuar utilizando nuestras herramientas de conversión." />
-        <link rel="canonical" href="https://pulgadas-a-cm.net/404" />
+        <title>Página no encontrada - Pulgadas a CM</title>
+        <meta name="description" content="Lo sentimos, la página que buscas no existe. Vuelve a nuestra calculadora de conversión de unidades para convertir pulgadas a centímetros." />
+        <meta name="robots" content="noindex" />
+        {/* No canonical on 404 pages */}
       </Helmet>
       <NavBar />
       

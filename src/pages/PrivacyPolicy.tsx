@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
         <title>Política de Privacidad - Pulgadas a CM</title>
-        <meta name="description" content="Política de privacidad de Pulgadas a CM. Información sobre cómo manejamos tus datos personales." />
+        <meta name="description" content="Política de privacidad de nuestra calculadora de conversión de unidades. Información sobre cómo tratamos tus datos cuando usas nuestro conversor online." />
         <link rel="canonical" href="https://pulgadas-a-cm.net/politica-de-privacidad" />
       </Helmet>
       
