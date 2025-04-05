@@ -11,3 +11,25 @@
   for = "/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Add long cache for static assets
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/lovable-uploads/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+

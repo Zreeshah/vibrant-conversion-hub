@@ -91,14 +91,14 @@ const Index = () => {
             <div className="prose prose-lg mx-auto max-w-4xl">
               <h2>Conversor online de Pulgadas a CM</h2>
               
-              {/* Infographic added here */}
+              {/* Infographic with explicit dimensions */}
               <div className="my-8 flex justify-center">
                 <img 
                   src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png" 
                   alt="Pulgadas a CM" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   width="600"
-                  height="800"
+                  height="400"
                   loading="lazy"
                 />
               </div>
