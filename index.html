@@ -31,12 +31,20 @@
     
     <!-- Cache control -->
     <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" as="image" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    
+    <!-- Preconnect to required origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

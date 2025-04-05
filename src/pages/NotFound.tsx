@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -22,7 +23,6 @@ const NotFound = () => {
         <title>Página no encontrada - Pulgadas a CM</title>
         <meta name="description" content="Lo sentimos, la página que buscas no existe. Vuelve a nuestra calculadora de conversión de unidades para convertir pulgadas a centímetros." />
         <meta name="robots" content="noindex" />
-        {/* No canonical on 404 pages */}
       </Helmet>
       <NavBar />
       

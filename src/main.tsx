@@ -27,9 +27,19 @@ const renderApp = () => {
   }
 };
 
-// Use both DOMContentLoaded and a direct call to handle various loading scenarios
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderApp);
+// Use requestIdleCallback for non-critical initialization
+if ('requestIdleCallback' in window) {
+  window.requestIdleCallback(() => {
+    if (document.readyState !== 'loading') {
+      renderApp();
+    } else {
+      document.addEventListener('DOMContentLoaded', renderApp);
+    }
+  });
 } else {
-  renderApp();
+  if (document.readyState !== 'loading') {
+    renderApp();
+  } else {
+    document.addEventListener('DOMContentLoaded', renderApp);
+  }
 }

@@ -1,11 +1,14 @@
-
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import ConversorCalculator from '@/components/ConversorCalculator';
-import ConversionTable from '@/components/ConversionTable';
-import ComprehensiveConversionTable from '@/components/ComprehensiveConversionTable';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import IntroText from '@/components/IntroText';
+import OptimizedImage from '@/components/OptimizedImage';
+
+// Lazy load non-critical components
+const ConversorCalculator = lazy(() => import('@/components/ConversorCalculator'));
+const ConversionTable = lazy(() => import('@/components/ConversionTable'));
+const ComprehensiveConversionTable = lazy(() => import('@/components/ComprehensiveConversionTable'));
 
 const Index = () => {
   // 1 inch = 2.54 cm
@@ -23,7 +26,7 @@ const Index = () => {
       
       {/* Main content */}
       <main className="flex-grow">
-        {/* Hero section */}
+        {/* Hero section - prioritized for LCP */}
         <section className="bg-blue-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
@@ -40,13 +43,10 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Introduction section */}
+        {/* Introduction section with optimized LCP */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg mx-auto">
-              <p>La conversión de pulgadas a centímetros es esencial para diversos campos, como la educación, la construcción, la sastrería y los proyectos de bricolaje. Tanto si está trabajando en una tarea de mejora del hogar, comprando productos internacionales o completando una tarea escolar, disponer de una herramienta de conversión precisa y fiable puede ahorrarle tiempo y evitar errores.</p>
-              <p>Nuestro conversor gratuito en línea de Pulgadas a CM proporciona resultados instantáneos y precisos, eliminando la necesidad de realizar cálculos manuales. Con una interfaz fácil de usar, esta herramienta garantiza que cualquiera -estudiantes, profesionales o usuarios cotidianos- pueda convertir fácilmente pulgadas a centímetros en sólo unos clics. Pruébelo ahora y simplifique sus conversiones de medidas.</p>
-            </div>
+            <IntroText />
           </div>
         </section>
 
@@ -63,24 +63,26 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Centímetros</h2>
-                <ConversorCalculator 
-                  fromUnit="Pulgadas" 
-                  toUnit="Centímetros" 
-                  conversionFactor={inchToCmFactor} 
-                  placeholder="Ingresa pulgadas"
-                />
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
-                <ConversorCalculator 
-                  fromUnit="Centímetros" 
-                  toUnit="Pulgadas" 
-                  conversionFactor={1/inchToCmFactor} 
-                  placeholder="Ingresa centímetros"
-                />
-              </div>
+              <Suspense fallback={<div className="h-60 bg-gray-100 rounded-md animate-pulse"></div>}>
+                <div>
+                  <h2 className="text-xl font-semibold mb-4 text-center">Pulgadas a Centímetros</h2>
+                  <ConversorCalculator 
+                    fromUnit="Pulgadas" 
+                    toUnit="Centímetros" 
+                    conversionFactor={inchToCmFactor} 
+                    placeholder="Ingresa pulgadas"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
+                  <ConversorCalculator 
+                    fromUnit="Centímetros" 
+                    toUnit="Pulgadas" 
+                    conversionFactor={1/inchToCmFactor} 
+                    placeholder="Ingresa centímetros"
+                  />
+                </div>
+              </Suspense>
             </div>
           </div>
         </section>
@@ -91,15 +93,14 @@ const Index = () => {
             <div className="prose prose-lg mx-auto max-w-4xl">
               <h2>Conversor online de Pulgadas a CM</h2>
               
-              {/* Infographic with explicit dimensions */}
+              {/* WebP Infographic with explicit dimensions */}
               <div className="my-8 flex justify-center">
-                <img 
-                  src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png" 
+                <OptimizedImage 
+                  src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png"
                   alt="Pulgadas a CM" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
-                  width="600"
-                  height="400"
-                  loading="lazy"
+                  width={600}
+                  height={400}
                 />
               </div>
               
@@ -208,7 +209,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Comprehensive table */}
+        {/* Comprehensive table with lazy loading */}
         <section className="py-12 bg-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -219,7 +220,9 @@ const Index = () => {
                 Encuentra rápidamente la conversión que necesitas en nuestra tabla detallada de pulgadas a centímetros.
               </p>
             </div>
-            <ComprehensiveConversionTable conversionFactor={inchToCmFactor} />
+            <Suspense fallback={<div className="h-96 bg-gray-100 rounded-md animate-pulse"></div>}>
+              <ComprehensiveConversionTable conversionFactor={inchToCmFactor} />
+            </Suspense>
           </div>
         </section>
         

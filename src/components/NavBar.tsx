@@ -16,6 +16,8 @@ const NavBar = () => {
                 className="h-10 w-auto sm:h-12"
                 width="48"
                 height="48"
+                loading="eager"
+                fetchpriority="high"
               />
             </Link>
           </div>
