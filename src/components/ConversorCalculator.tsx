@@ -50,7 +50,7 @@ const ConversorCalculator = ({
       <div className="flex flex-col space-y-4">
         <div>
           <Label htmlFor={`${inputUnit}-input`} className="text-base font-medium mb-1 block">
-            {inputUnit}
+            Valor en {inputUnit}
           </Label>
           <Input
             id={`${inputUnit}-input`}
@@ -68,7 +68,7 @@ const ConversorCalculator = ({
         
         <div>
           <Label htmlFor={`${outputUnit}-result`} className="text-base font-medium mb-1 block">
-            {outputUnit}
+            Valor en {outputUnit}
           </Label>
           <Input
             id={`${outputUnit}-result`}
