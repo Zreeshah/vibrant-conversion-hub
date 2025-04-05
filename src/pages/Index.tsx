@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ConversorCalculator from '@/components/ConversorCalculator';
@@ -43,10 +42,10 @@ const Index = () => {
           <div>
             <h2 className="text-xl font-semibold mb-4 text-center">Centímetros a Pulgadas</h2>
             <ConversorCalculator 
-              fromUnit="Centímetros" 
-              toUnit="Pulgadas" 
-              conversionFactor={inchToCmFactor} 
-              reverse={true}
+              fromUnit="Pulgadas" 
+              toUnit="Centímetros" 
+              conversionFactor={inchToCmFactor}
+              reverse={true} 
               placeholder="Ingresa centímetros"
             />
           </div>
