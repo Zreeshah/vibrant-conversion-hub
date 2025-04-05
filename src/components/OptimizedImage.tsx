@@ -29,12 +29,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       height={height}
       className={className}
       loading={priority ? "eager" : "lazy"}
-      fetchPriority={priority ? "high" : "auto"}
+      fetchpriority={priority ? "high" : "auto"}
       decoding="async"
       style={{ 
-        maxWidth: "100%",
-        height: "auto",
-        aspectRatio: `${width} / ${height}`
+        width: 'auto',
+        height: 'auto',
+        maxWidth: '100%'
       }}
     />
   );

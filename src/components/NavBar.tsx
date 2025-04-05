@@ -14,7 +14,7 @@ const NavBar = () => {
               <OptimizedImage 
                 src="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" 
                 alt="Pulgadas a CM Logo" 
-                className="h-auto w-auto"
+                className="h-10 w-auto sm:h-12"
                 width={120}
                 height={48}
                 priority={true}

@@ -1,4 +1,3 @@
-
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import NavBar from '@/components/NavBar';
@@ -105,7 +104,7 @@ const Index = () => {
                 <OptimizedImage 
                   src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png"
                   alt="Pulgadas a CM" 
-                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  className="rounded-lg shadow-lg"
                   width={800}
                   height={533}
                   priority={true}
