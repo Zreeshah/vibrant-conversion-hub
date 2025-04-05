@@ -41,18 +41,18 @@ const ConversorCalculator = ({
   };
 
   // Calculate which units to display based on the reverse prop
-  const inputUnit = reverse ? toUnit : fromUnit;
-  const outputUnit = reverse ? fromUnit : toUnit;
+  const displayFrom = reverse ? toUnit : fromUnit;
+  const displayTo = reverse ? fromUnit : toUnit;
 
   return (
     <div className="p-6 rounded-lg border border-gray-200 shadow-sm bg-white">
       <div className="flex flex-col space-y-4">
         <div>
-          <Label htmlFor={`${inputUnit}-input`} className="text-base font-medium mb-1 block">
-            Valor en {inputUnit}
+          <Label htmlFor={`${displayFrom}-input`} className="text-base font-medium mb-1 block">
+            Valor en {displayFrom}
           </Label>
           <Input
-            id={`${inputUnit}-input`}
+            id={`${displayFrom}-input`}
             type="text"
             value={inputValue}
             onChange={handleInputChange}
@@ -66,11 +66,11 @@ const ConversorCalculator = ({
         </div>
         
         <div>
-          <Label htmlFor={`${outputUnit}-result`} className="text-base font-medium mb-1 block">
-            Valor en {outputUnit}
+          <Label htmlFor={`${displayTo}-result`} className="text-base font-medium mb-1 block">
+            Valor en {displayTo}
           </Label>
           <Input
-            id={`${outputUnit}-result`}
+            id={`${displayTo}-result`}
             type="text"
             value={result !== null ? result.toFixed(4).replace(/\.?0+$/, '') : ""}
             readOnly
