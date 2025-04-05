@@ -32,8 +32,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
       style={{ 
-        aspectRatio: `${width} / ${height}`,
-        objectFit: "contain"
+        maxWidth: "100%",
+        height: "auto",
+        aspectRatio: `${width} / ${height}`
       }}
     />
   );

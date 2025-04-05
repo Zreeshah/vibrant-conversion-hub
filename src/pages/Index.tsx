@@ -106,8 +106,8 @@ const Index = () => {
                   src="/lovable-uploads/85d71a65-46b3-46e9-b27c-1e6632a8103d.png"
                   alt="Pulgadas a CM" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={533}
                   priority={true}
                 />
               </div>
