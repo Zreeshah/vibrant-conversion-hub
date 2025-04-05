@@ -41,7 +41,8 @@ const ConversorCalculator = ({
     }
   };
 
-  // Determine which units to display based on reverse prop
+  // Display the correct unit labels based on the reverse prop
+  // If reverse=true, input should be toUnit and output should be fromUnit
   const displayInputUnit = reverse ? toUnit : fromUnit;
   const displayOutputUnit = reverse ? fromUnit : toUnit;
 
