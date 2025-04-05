@@ -31,11 +31,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
-      style={{ 
-        width: 'auto',
-        height: 'auto',
-        maxWidth: '100%'
-      }}
     />
   );
 };
