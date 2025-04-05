@@ -1,8 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 interface ConversorCalculatorProps {
@@ -41,20 +40,19 @@ const ConversorCalculator = ({
     }
   };
 
-  // Display the correct unit labels based on the reverse prop
-  // If reverse=true, input should be toUnit and output should be fromUnit
-  const displayInputUnit = reverse ? toUnit : fromUnit;
-  const displayOutputUnit = reverse ? fromUnit : toUnit;
+  // Calculate which units to display based on the reverse prop
+  const inputUnit = reverse ? toUnit : fromUnit;
+  const outputUnit = reverse ? fromUnit : toUnit;
 
   return (
     <div className="p-6 rounded-lg border border-gray-200 shadow-sm bg-white">
       <div className="flex flex-col space-y-4">
         <div>
-          <Label htmlFor={`${displayInputUnit}-input`} className="text-base font-medium mb-1 block">
-            Valor en {displayInputUnit}
+          <Label htmlFor={`${inputUnit}-input`} className="text-base font-medium mb-1 block">
+            Valor en {inputUnit}
           </Label>
           <Input
-            id={`${displayInputUnit}-input`}
+            id={`${inputUnit}-input`}
             type="text"
             value={inputValue}
             onChange={handleInputChange}
@@ -68,11 +66,11 @@ const ConversorCalculator = ({
         </div>
         
         <div>
-          <Label htmlFor={`${displayOutputUnit}-result`} className="text-base font-medium mb-1 block">
-            Valor en {displayOutputUnit}
+          <Label htmlFor={`${outputUnit}-result`} className="text-base font-medium mb-1 block">
+            Valor en {outputUnit}
           </Label>
           <Input
-            id={`${displayOutputUnit}-result`}
+            id={`${outputUnit}-result`}
             type="text"
             value={result !== null ? result.toFixed(4).replace(/\.?0+$/, '') : ""}
             readOnly
