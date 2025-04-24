@@ -264,7 +264,7 @@ const Index = () => {
               
               <h3 className="text-gray-700">3. Las pulgadas en alemán se llaman «Inch» y «Zoll». ¿Son realmente lo mismo?</h3>
               <p>Sí, en alemán, el término «Zoll» se refiere a una pulgada. La palabra «Inch» se utiliza a veces en contextos anglófonos en Alemania, pero «Zoll» es el término tradicional.</p>
-              <p>Tanto «Zoll» como «Inch» representan la misma medida: 1 Zoll = 1 Inch = 2,54 cm. El término «Zoll» se utiliza habitualmente en los países de habla alemana para referirse a tamaños de pantallas (televisores, monitores), diámetros de tuberías y herramientas industriales.</p>
+              <p>Tanto «Zoll» como «Inch» representan la misma medida: 1 Zoll = 1 Inch = 2,54 cm. El término «Zoll» se utiliza habitualmente en los pa��ses de habla alemana para referirse a tamaños de pantallas (televisores, monitores), diámetros de tuberías y herramientas industriales.</p>
               
               <h3 className="text-gray-700">4. ¿Qué se entiende por «centímetro»?</h3>
               <p>Un centímetro (cm) es una unidad de longitud del sistema métrico decimal, ampliamente utilizado en todo el mundo excepto en Estados Unidos y otros pocos países que siguen las medidas imperiales.</p>

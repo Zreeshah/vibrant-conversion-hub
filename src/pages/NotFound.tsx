@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
