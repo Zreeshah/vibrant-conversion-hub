@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -22,6 +22,7 @@ const NotFound = () => {
         <meta name="description" content="Lo sentimos, la página que buscas no existe. Vuelve a nuestra calculadora de conversión de unidades para convertir pulgadas a centímetros." />
         <meta name="robots" content="noindex" />
       </Helmet>
+      
       <NavBar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
