@@ -19,4 +19,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // Bundle CJS packages into the SSR output so Node.js ESM can import them.
+    noExternal: ['react-helmet-async'],
+  },
 }));
