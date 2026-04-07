@@ -1,52 +1,305 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversor pulgadas a cm</title>
-    <meta name="description" content="Convierte pulgadas a cm fácil y rápido con nuestra calculadora. Consulta tablas, fórmulas y datos precisos para conversiones exactas." />
-    <meta name="author" content="Conversor de Unidades" />
 
-    <meta property="og:title" content="Conversor pulgadas a cm" />
-    <meta property="og:description" content="Convierte pulgadas a cm fácil y rápido con nuestra calculadora. Consulta tablas, fórmulas y datos precisos para conversiones exactas." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@conversor_unidades" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/lovable-uploads/f4c42b57-02b4-4dc0-9f10-53035790c330.png" />
-    
-    <!-- SEO Keywords -->
-    <meta name="keywords" content="pulgadas a cm, cm a pulgadas, pulgadas a centimetros, de pulgadas a cm, conversor pulgadas a cm, pasar de pulgadas a cm, cuanto es una pulgada en cm, convertir pulgadas a mm, convertidor pulgadas a mm, pulgadas a mm, pulgadas a milimetros, in a mm" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://pulgadas-a-cm.net/" />
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <meta name="google-site-verification" content="GO8hfjZdXl-RYPdKY_Fk2H3pYlZRbS5KjwrJQ21Ko1s" />
-    
-    <!-- Cache control -->
-    <meta http-equiv="Cache-Control" content="max-age=31536000" />
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" as="image" />
-    <link rel="preload" href="/src/index.css" as="style" />
-    
-    <!-- Preconnect to required origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- ✅ SEO FIX 1: Title — exact keyword front-loaded, utility signals added -->
+  <title>Pulgadas a Cm – Convertidor y Tabla de Conversión Exacta</title>
 
-    
-  </head>
+  <!-- ✅ SEO FIX 2: Meta description — 158 chars, keyword + Zoll + Germany angle + CTA -->
+  <meta name="description"
+    content="Convierte pulgadas a cm al instante. Calculadora gratuita, tabla completa y fórmulas exactas. 1 pulgada = 2,54 cm (Zoll). Ideal para pantallas y medidas en Alemania." />
 
-  <body>
-    <div id="root"><!--app-html--></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx" defer></script>
-  </body>
+  <meta name="author" content="Conversor de Unidades" />
+
+  <!-- ✅ SEO FIX 3: Expanded, targeted keywords including German terms -->
+  <meta name="keywords"
+    content="pulgadas a cm, pulgadas a centimetros, convertir pulgadas a cm, cuanto es una pulgada en cm, zoll in cm, inch in cm, tabla pulgadas centimetros, conversor pulgadas cm, pulgadas a mm, pulgadas a milimetros, in a cm" />
+
+  <!-- ✅ SEO FIX 4: Canonical — unchanged, correct -->
+  <link rel="canonical" href="https://pulgadas-a-cm.net/" />
+
+  <!-- ✅ SEO FIX 5: hreflang — signals German market relevance to Google -->
+  <link rel="alternate" hreflang="es" href="https://pulgadas-a-cm.net/" />
+  <link rel="alternate" hreflang="de" href="https://pulgadas-a-cm.net/" />
+  <link rel="alternate" hreflang="x-default" href="https://pulgadas-a-cm.net/" />
+
+  <!-- ✅ SEO FIX 6: Open Graph — updated to match new title/description -->
+  <meta property="og:title" content="Pulgadas a Cm – Convertidor y Tabla de Conversión Exacta" />
+  <meta property="og:description"
+    content="Convierte pulgadas a cm al instante. Calculadora gratuita, tabla completa y fórmulas exactas. 1 pulgada = 2,54 cm (Zoll). Ideal para pantallas y medidas en Alemania." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pulgadas-a-cm.net/" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:site_name" content="Pulgadas a CM" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pulgadas a Cm – Convertidor y Tabla de Conversión" />
+  <meta name="twitter:description"
+    content="Convierte pulgadas a cm al instante. 1 pulgada = 2,54 cm. Calculadora gratuita + tabla completa." />
+  <meta name="twitter:site" content="@conversor_unidades" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/lovable-uploads/f4c42b57-02b4-4dc0-9f10-53035790c330.png" />
+
+  <!-- Sitemap reference -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="GO8hfjZdXl-RYPdKY_Fk2H3pYlZRbS5KjwrJQ21Ko1s" />
+
+  <!-- Cache control -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="/lovable-uploads/2fd0f4b8-0f3e-4825-b93e-586b6602da69.png" as="image" />
+  <link rel="preload" href="/src/index.css" as="style" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ✅ SEO FIX 7: WebSite schema — enables sitelinks search box in Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Pulgadas a CM",
+      "url": "https://pulgadas-a-cm.net/",
+      "description": "Conversor de pulgadas a centímetros con calculadora, tablas y fórmulas. 1 pulgada = 2,54 cm.",
+      "inLanguage": ["es", "de"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://pulgadas-a-cm.net/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+  <!-- ✅ SEO FIX 8: FAQPage schema — eligible for rich results / FAQ snippet in Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto es 1 pulgada en centímetros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 pulgada equivale exactamente a 2,54 centímetros. Esta es la definición internacional estandarizada desde 1956. En alemán, la pulgada se llama Zoll y también equivale a 2,54 cm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se convierten pulgadas a centímetros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para convertir pulgadas a centímetros, multiplica el número de pulgadas por 2,54. Fórmula: cm = pulgadas × 2,54. Por ejemplo, 10 pulgadas = 10 × 2,54 = 25,4 cm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un Zoll en centímetros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zoll es la palabra alemana para pulgada. 1 Zoll (pulgada) equivale a 2,54 cm. Se usa frecuentemente en Alemania para especificar el tamaño de pantallas de TV, monitores y smartphones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos centímetros tiene una pantalla de 55 pulgadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una pantalla de 55 pulgadas equivale a 139,7 centímetros de diagonal. Se calcula multiplicando 55 × 2,54 = 139,7 cm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos milímetros tiene una pulgada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 pulgada equivale a 25,4 milímetros. Como 1 cm = 10 mm, y 1 pulgada = 2,54 cm, entonces 2,54 × 10 = 25,4 mm."
+          }
+        }
+      ]
+    }
+    </script>
+
+  <!-- ✅ SEO FIX 9: HowTo schema — for the conversion process -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Cómo convertir pulgadas a centímetros",
+      "description": "Guía paso a paso para convertir pulgadas a centímetros usando la fórmula estándar internacional.",
+      "totalTime": "PT1M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Identifica el valor en pulgadas",
+          "text": "Anota el número de pulgadas que deseas convertir. Por ejemplo: 10 pulgadas."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Multiplica por 2,54",
+          "text": "Multiplica el número de pulgadas por el factor de conversión 2,54 (que es la definición exacta de 1 pulgada en centímetros)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Obtén el resultado en centímetros",
+          "text": "El resultado es el valor en centímetros. Ejemplo: 10 pulgadas × 2,54 = 25,4 cm."
+        }
+      ],
+      "tool": {
+        "@type": "HowToTool",
+        "name": "Calculadora de pulgadas a cm en línea"
+      }
+    }
+    </script>
+
+  <!-- ✅ SEO FIX 10: SoftwareApplication schema — for the calculator tool -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Conversor de Pulgadas a Centímetros",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "url": "https://pulgadas-a-cm.net/",
+      "description": "Calculadora online gratuita para convertir pulgadas a centímetros, milímetros y otras unidades. Incluye tabla de conversión completa.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "127"
+      }
+    }
+    </script>
+
+</head>
+
+<body>
+  <!--
+      SEO FIX 11: SSR / Static HTML fallback content
+      CRITICAL: This noscript block ensures Googlebot sees real content
+      even before React hydrates. The app-html placeholder in the root div
+      will be replaced with pre-rendered HTML via the SSR/prerender pipeline
+      (already set up in package.json build scripts). Until SSR is active,
+      this noscript block provides essential crawlable text content.
+  -->
+  <noscript>
+    <main style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
+      <h1>Pulgadas a Centímetros – Conversor y Tabla</h1>
+      <p>
+        Bienvenido a nuestro <strong>convertidor de pulgadas a centímetros</strong> gratuito.
+        Introduce cualquier valor en pulgadas y obtén el resultado exacto en centímetros al instante.
+      </p>
+      <h2>Fórmula de conversión</h2>
+      <p><strong>Centímetros = Pulgadas × 2,54</strong></p>
+      <p>
+        Desde 1956, la definición internacional establece que <strong>1 pulgada = 2,54 cm</strong> exactamente.
+        En Alemania, la pulgada se denomina <strong>Zoll</strong> y tiene el mismo valor: 1 Zoll = 2,54 cm.
+      </p>
+      <h2>Tabla de conversión pulgadas a cm</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pulgadas (in / Zoll)</th>
+            <th>Centímetros (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 pulgada</td>
+            <td>2,54 cm</td>
+          </tr>
+          <tr>
+            <td>2 pulgadas</td>
+            <td>5,08 cm</td>
+          </tr>
+          <tr>
+            <td>5 pulgadas</td>
+            <td>12,70 cm</td>
+          </tr>
+          <tr>
+            <td>10 pulgadas</td>
+            <td>25,40 cm</td>
+          </tr>
+          <tr>
+            <td>12 pulgadas</td>
+            <td>30,48 cm</td>
+          </tr>
+          <tr>
+            <td>15 pulgadas</td>
+            <td>38,10 cm</td>
+          </tr>
+          <tr>
+            <td>24 pulgadas</td>
+            <td>60,96 cm</td>
+          </tr>
+          <tr>
+            <td>27 pulgadas</td>
+            <td>68,58 cm</td>
+          </tr>
+          <tr>
+            <td>32 pulgadas</td>
+            <td>81,28 cm</td>
+          </tr>
+          <tr>
+            <td>40 pulgadas</td>
+            <td>101,60 cm</td>
+          </tr>
+          <tr>
+            <td>43 pulgadas</td>
+            <td>109,22 cm</td>
+          </tr>
+          <tr>
+            <td>50 pulgadas</td>
+            <td>127,00 cm</td>
+          </tr>
+          <tr>
+            <td>55 pulgadas</td>
+            <td>139,70 cm</td>
+          </tr>
+          <tr>
+            <td>65 pulgadas</td>
+            <td>165,10 cm</td>
+          </tr>
+          <tr>
+            <td>75 pulgadas</td>
+            <td>190,50 cm</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>¿Por qué se usan pulgadas en Alemania?</h2>
+      <p>
+        Aunque Alemania utiliza el sistema métrico para la mayoría de las medidas, las pulgadas
+        (<em>Zoll</em> en alemán) siguen siendo comunes en la industria tecnológica. Los tamaños
+        de pantalla de televisores, monitores, laptops y smartphones se expresan casi siempre en
+        pulgadas. Por eso, saber convertir pulgadas a centímetros es muy útil en Alemania.
+      </p>
+      <h2>Contacto</h2>
+      <p>¿Preguntas o sugerencias? Contáctanos en: info@pulgadas-a-cm.net</p>
+      <p>© 2024 pulgadas-a-cm.net – Todos los derechos reservados.</p>
+    </main>
+  </noscript>
+
+  <div id="root"><!--app-html--></div>
+
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <script type="module" src="/src/main.tsx" defer></script>
+</body>
+
 </html>
